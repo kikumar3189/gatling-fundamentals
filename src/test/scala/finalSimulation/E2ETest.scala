@@ -116,4 +116,8 @@ class E2ETest extends Simulation{
   ).protocols(httpConf)
     .maxDuration(testDuration.second)
 
+  // Below command must be used to run tests from maven command line
+  // mvn gatling:test -Dgatling.simulationClass=finalSimulation.E2ETest -DUSERS=10 -DRAMP_DURA
+  //TION=5 -DDURATION=30
+
 }
