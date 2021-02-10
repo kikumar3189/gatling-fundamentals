@@ -6,7 +6,7 @@ class MyFirstTest extends Simulation {
   // 1 Http Conf
   val httpConf = http.baseUrl("http://localhost:8080/app/")
     .header("Accept", "application/json")
-    .proxy(Proxy("localhost", 8888))
+//    .proxy(Proxy("localhost", 8080))
 
 
   // 2 Scenario Definition
@@ -16,7 +16,7 @@ class MyFirstTest extends Simulation {
 
   // 3 Load Scenario
   setUp(
-    scn.inject(atOnceUsers(1))
+    scn.inject(atOnceUsers(2))
   ).protocols(httpConf)
 
 }
